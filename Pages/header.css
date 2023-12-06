@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    background-color: #e8243c;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px;
+}
+
+.cabecalho h1{
+    color: white;
+    font-size: 30px;
+}
+
+.searchbar-text {
+    font-size: 16px;
+}
+
+.barra-busca {
+    border-radius: 20px;
+    border: solid 1px #EFE9F5;
+    background-color: #EFE9F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 40px;
+    width: 500px;
+}
+
+.barra-busca input{
+    border: none;
+    background-color: transparent;
+}
+
+.search-icon {
+    width: 16px;
+}
+
+.navbar{
+    display: flex;
+    align-items: flex-end;
+}
+
+.opcao{
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #000; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    align-items: end;
+    border: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.primeira{
+    background-color: #FFFBFA;
+}
+
+.segunda{
+    background-color: #F9DEDC;
+}
