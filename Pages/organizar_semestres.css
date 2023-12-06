@@ -6,3 +6,24 @@
 main{
     background-color: #F9DEDC;
 }
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.botoes button{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+}
+
+.botoes button:hover {
+    box-shadow: 4px 4px 5px #414141;
+    background-color: #ececec;
+    cursor: pointer;
+}
