@@ -80,3 +80,8 @@ header {
 main{
     background-color: #FFFBFA;
 }
+
+.secao-disciplinas{
+    display: flex;
+    justify-content: space-around;
+}
