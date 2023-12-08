@@ -9,7 +9,7 @@ body{
     height: 100vh;
 }
 
-.background {
+.foto-ufscar {
     flex: 1;
     background-image: url('images/ufscar.png');
     background-size: 50% 100%; 
@@ -18,7 +18,7 @@ body{
     background-size: cover;
   }
 
-.background::after {
+.foto-ufscar::after {
     content: "";
     position: absolute;
     width: 50%;
@@ -37,7 +37,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 20px;
+    padding: 5%;
     box-sizing: border-box;
 }
 
@@ -54,6 +54,8 @@ body{
     padding: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     background-color: #ECE6F0;
+    width: 50%;
+    height: 100%;
 }
 
 .login-form input{
