@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.background {
+    flex: 1;
+    background-image: url('images/ufscar.png');
+    background-size: 50% 100%; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }
+
+.background::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(152, 39, 39, 0.5);
+  }
+
+  h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+
+  .login-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+
+.login-form form {
+    width: 300px;
+    text-align: center;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ECE6F0;
+}
+
+.login-form input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 0;
+    border-radius: 20px;
+    
+}
+
+.login-form button {
+    width: 50%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #982727;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.login-form button:hover {
+    background-color: #6e1b1b;
+}
