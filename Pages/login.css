@@ -1,86 +1,103 @@
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 50%; 
 }
 
 .foto-ufscar {
-    flex: 1;
-    background-image: url('images/ufscar.png');
-    background-size: 50% 100%; 
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
-  }
-
-.foto-ufscar::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(152, 39, 39, 0.5);
-  }
-
-  h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-  }
-
-  .login-form {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 5%;
-    box-sizing: border-box;
+  flex: 1;
+  background-image: url('images/ufscar.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .login-form-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }  
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  flex: 1;
+  position: relative;
+}
+
+
+.camada-vermelha {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(152, 39, 39, 0.5); 
+}
+
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  padding: 10% 10%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;   
+}
 
 .login-form form {
-    width: 300px;
-    text-align: center;
-    padding: 5%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: #ECE6F0;
-    width: 50%;
-    height: 100%;
+  text-align: center;
+  padding: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ECE6F0;
+  width: 100%; 
+  max-width: 300px; 
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .login-form input{
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 0;
-    border-radius: 20px;
-    
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 4%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
 }
 
 .login-form button {
-    width: 50%;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #982727;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-    border-radius: 10px;
+  width: 50%;
+  padding: 5%;
+  background-color: #982727;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 10px;
 }
 
 .login-form button:hover {
-    background-color: #6e1b1b;
+  background-color: #6e1b1b;
+}
+
+
+@media only screen and (min-width: 597px){
+  .container, 
+  .login-form-container {
+    width: 50%; 
+    height: 100vh; 
+    box-sizing: border-box; 
+    float: left; 
+  }
+  .camada-vermelha {
+    width: 50%;
+    height: 100%;
+  }
 }
