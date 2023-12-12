@@ -7,6 +7,7 @@
     <link href="organizar_semestres.css" rel="stylesheet">
     <link href="header.css" rel="stylesheet">
     <link href="disciplinas.css" rel="stylesheet">
+    <link rel="stylesheet" href="carrinho.css">
     <title>GaRaRo</title>
 </head>
 <body>
@@ -24,10 +25,10 @@
         </nav>
     </header>
     <main>
-        <div class="semestre">
+        <div class="semestre" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>Semestre 1</h2>
             <div class="disciplinas">
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag1"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Lógica Digital</h3>
                     </div>
@@ -73,7 +74,7 @@
                 <button>Editar Matérias</button>
             </div>
         </div>
-        <div class="semestre">
+        <div class="semestre" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>Semestre 2</h2>
             <div class="disciplinas">
                 <div class="cartao-disciplina">
@@ -138,6 +139,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="carrinho" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="carrinho-vazio">Arraste as matérias para cá.</p>
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+                document.getElementById('carrinho-vazio').style.display = 'none';
+            }
+            </script>
+
     </main>
     <footer>
         
