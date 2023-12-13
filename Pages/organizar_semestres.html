@@ -16,7 +16,7 @@
             <h1 class="titulo">GaRaRo</h1>
             <div class="barra-busca">
                 <input class="searchbar-text" type="text" placeholder="Buscar Disciplina">
-                <img class="search-icon" src="../images/magnifying-glass-solid.svg">
+                <img class="search-icon" src="./images/magnifying-glass-solid.svg">
             </div>
         </div>
         <nav class="navbar">
@@ -25,9 +25,9 @@
         </nav>
     </header>
     <main>
-        <div class="semestre" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="semestre">
             <h2>Semestre 1</h2>
-            <div class="disciplinas">
+            <div class="disciplinas" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div class="cartao-disciplina" draggable="true" id="drag1"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Lógica Digital</h3>
@@ -38,7 +38,7 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag2"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Cálculo Diferencial e Integral</h3>
                     </div>
@@ -48,7 +48,7 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag3"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Introdução ao Pensamento Algoritmico</h3>
                     </div>
@@ -58,7 +58,7 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag4"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Contrução de Algoritmos e Programação</h3>
                     </div>
@@ -74,10 +74,10 @@
                 <button>Editar Matérias</button>
             </div>
         </div>
-        <div class="semestre" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="semestre">
             <h2>Semestre 2</h2>
-            <div class="disciplinas">
-                <div class="cartao-disciplina">
+            <div class="disciplinas" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="cartao-disciplina" draggable="true" id="drag5"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Algoritmos e Estrutura de Dados 1</h3>
                     </div>
@@ -87,7 +87,7 @@
                         <p>1001350 ou 25070 ou 1001133</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag6"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Arquitetura e Organizaçãode Computadores 1</h3>
                     </div>
@@ -97,7 +97,7 @@
                         <p>1001351</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag7"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Geometria Analítica</h3>
                     </div>
@@ -107,7 +107,7 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag8"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Lógica Matemática</h3>
                     </div>
@@ -117,7 +117,7 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag9"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Probabilidade e Estatística</h3>
                     </div>
@@ -127,7 +127,7 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-                <div class="cartao-disciplina">
+                <div class="cartao-disciplina" draggable="true" id="drag10"  ondragstart="drag(event)">
                     <div class="disciplina-titulo">
                         <h3>Programação Orientada a Objetos</h3>
                     </div>
@@ -144,7 +144,8 @@
             <p id="carrinho-vazio">Arraste as matérias para cá.</p>
         <script>
             function allowDrop(ev) {
-                ev.preventDefault();
+                if(['carrinho', 'disciplinas'].includes(ev.target.className))
+                    ev.preventDefault();
             }
             
             function drag(ev) {
