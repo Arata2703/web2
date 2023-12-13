@@ -15,7 +15,7 @@
             <h1 class="titulo">GaRaRo</h1>
             <div class="barra-busca">
                 <input class="searchbar-text" type="text" placeholder="Buscar Disciplina">
-                <img class="search-icon" src="../images/magnifying-glass-solid.svg">
+                <img class="search-icon" src="./images/magnifying-glass-solid.svg">
             </div>
         </div>
         <nav class="navbar">
@@ -24,6 +24,108 @@
         </nav>
     </header>
     <main>
+        <script>
+            function getDisciplinas() {
+                const json = fetch('/../disciplinas.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const disciplinas = data
+                        const disciplinasDiv = document.querySelector('.disciplinas')
+                        // dividindo a lista de disciplinas em semestres
+                        var semestres = [{
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }]
+                        disciplinas.forEach(disciplina => {
+                            disciplina.categoria === 'Obrigatória' ? 
+                                semestres[disciplina.semestre_perfil - 1].obrigatorias.push(disciplina)
+                            : semestres[disciplina.semestre_perfil - 1].optativas.push(disciplina)
+                        })
+                        // criando os cartões de disciplina
+                        semestres.forEach(semestre => {
+                            const semestreDiv = document.createElement('div')
+                            semestreDiv.classList.add('semestre')
+                            const semestreTitulo = document.createElement('h2')
+                            semestreTitulo.innerText = `Semestre ${semestres.indexOf(semestre) + 1}`
+                            semestreDiv.appendChild(semestreTitulo)
+                            const disciplinasDiv = document.createElement('div')
+                            disciplinasDiv.classList.add('disciplinas')
+                            semestre.obrigatorias.forEach(disciplina => {
+                                const cartaoDisciplina = document.createElement('div')
+                                cartaoDisciplina.classList.add('cartao-disciplina')
+                                const disciplinaTitulo = document.createElement('div')
+                                disciplinaTitulo.classList.add('disciplina-titulo')
+                                const disciplinaTituloH3 = document.createElement('h3')
+                                disciplinaTituloH3.innerText = disciplina.nome
+                                disciplinaTitulo.appendChild(disciplinaTituloH3)
+                                cartaoDisciplina.appendChild(disciplinaTitulo)
+                                const disciplinaInformacoes = document.createElement('div')
+                                disciplinaInformacoes.classList.add('disciplinas-informacoes')
+                                const disciplinaInformacoesP1 = document.createElement('p')
+                                disciplinaInformacoesP1.innerText = `${disciplina.sigla} - ${disciplina.categoria}`
+                                const disciplinaInformacoesP2 = document.createElement('p')
+                                disciplinaInformacoesP2.innerText = `${disciplina.creditos} Créditos`
+                                const disciplinaInformacoesP3 = document.createElement('p')
+                                disciplinaInformacoesP3.innerText = disciplina.pre_requisitos.length ? disciplina.pre_requisitos : 'Nenhum Pré-Requisito'
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP1)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP2)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP3)
+                                cartaoDisciplina.appendChild(disciplinaInformacoes)
+                                disciplinasDiv.appendChild(cartaoDisciplina)
+                            })
+                            semestreDiv.appendChild(disciplinasDiv)
+                            disciplinasDiv.appendChild(document.createElement('br'))
+                            semestre.optativas.forEach(disciplina => {
+                                const cartaoDisciplina = document.createElement('div')
+                                cartaoDisciplina.classList.add('cartao-disciplina')
+                                const disciplinaTitulo = document.createElement('div')
+                                disciplinaTitulo.classList.add('disciplina-titulo')
+                                const disciplinaTituloH3 = document.createElement('h3')
+                                disciplinaTituloH3.innerText = disciplina.nome
+                                disciplinaTitulo.appendChild(disciplinaTituloH3)
+                                cartaoDisciplina.appendChild(disciplinaTitulo)
+                                const disciplinaInformacoes = document.createElement('div')
+                                disciplinaInformacoes.classList.add('disciplinas-informacoes')
+                                const disciplinaInformacoesP1 = document.createElement('p')
+                                disciplinaInformacoesP1.innerText = `${disciplina.sigla} - ${disciplina.categoria}`
+                                const disciplinaInformacoesP2 = document.createElement('p')
+                                disciplinaInformacoesP2.innerText = `${disciplina.creditos} Créditos`
+                                const disciplinaInformacoesP3 = document.createElement('p')
+                                disciplinaInformacoesP3.innerText = disciplina.pre_requisitos.length ? disciplina.pre_requisitos : 'Nenhum Pré-Requisito'
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP1)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP2)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP3)
+                                cartaoDisciplina.appendChild(disciplinaInformacoes)
+                                disciplinasDiv.appendChild(cartaoDisciplina)
+                            })
+                            semestreDiv.appendChild(disciplinasDiv)
+                            document.querySelector('main').appendChild(semestreDiv)
+                        })
+                    })
+                }
+            // getDisciplinas()
+        </script>
         <div class="semestre">
             <h2>Semestre 1</h2>
             <div class="disciplinas">
