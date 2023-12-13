@@ -1,0 +1,506 @@
+[
+  {
+    "codigo": 0,
+    "semestre_perfil": 1,
+    "nome": "Cálculo Diferencia e Integral 1",
+    "sigla": "CDI",
+    "categoria": "obrigatoria",
+    "creditos": 6,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 1,
+    "nome": "Introdução ao Pensamento Algorítmico",
+    "sigla": "IPA",
+    "categoria": "obrigatoria",
+    "creditos": 2,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 1,
+    "nome": "Construção de Algoritmos e Programação",
+    "sigla": "CAP",
+    "categoria": "obrigatoria",
+    "creditos": 8,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 1,
+    "nome": "Lógica Digital",
+    "sigla": "LD",
+    "categoria": "obrigatoria",
+    "creditos": 6,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 2,
+    "nome": "Geometria Analítica",
+    "sigla": "GA",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 2,
+    "nome": "Lógica Matemática",
+    "sigla": "LM",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 2,
+    "nome": "Algoritmos e Estruturas de Dados 1",
+    "sigla": "AED1",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["CAP"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 2,
+    "nome": "Arquitetura e Organização de Computadores 1",
+    "sigla": "ARQ1",
+    "categoria": "obrigatoria",
+    "creditos": 6,
+    "pre_requisitos": ["LD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 2,
+    "nome": "Programação Orientada a Objetos",
+    "sigla": "POO",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["CAP"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 2,
+    "nome": "Probabilidade e Estatística",
+    "sigla": "ProbEst",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 82260,
+    "semestre_perfil": 3,
+    "nome": "Cálculo Diferencial e Séries",
+    "sigla": "CDS",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["CDI"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 3,
+    "nome": "Algoritmos e Estruturas de Dados 2",
+    "sigla": "AED2",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 3,
+    "nome": "Matemática Discreta",
+    "sigla": "MD",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 3,
+    "nome": "Organização e Recuperação da Informação",
+    "sigla": "ORI",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 3,
+    "nome": "Sistemas Operacionais",
+    "sigla": "SO",
+    "categoria": "obrigatoria",
+    "creditos": 6,
+    "pre_requisitos": ["ARQ1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 3,
+    "nome": "Optativa de Humanas e Complementares",
+    "sigla": "Humanas",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 4,
+    "nome": "Álgebra Linear",
+    "sigla": "AlgeLin",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["GA", "MD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 4,
+    "nome": "Interação Humano-Computador",
+    "sigla": "IHC",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["CAP"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 4,
+    "nome": "Projeto e Análise de Algoritmos",
+    "sigla": "PAA",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 4,
+    "nome": "Engenharia de Software 1",
+    "sigla": "ES1",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["POO"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 4,
+    "nome": "Banco de Dados",
+    "sigla": "BD",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 4,
+    "nome": "Inteligência Artificial",
+    "sigla": "IA",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Cálculo Numérico",
+    "sigla": "CN",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["CDS", "GA"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Redes de Computadores",
+    "sigla": "Redes",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["SO"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Programação Orientada a Objetos Avançada",
+    "sigla": "POOA",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["POO", "AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Desenvolvimento de Software para Web 1",
+    "sigla": "DSW1",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["BD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Engenharia de Software 2",
+    "sigla": "ES2",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["ES1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Projeto e Implementação de Banco de Dados",
+    "sigla": "PIBD",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["BD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Aprendizado de Máquina 1",
+    "sigla": "AM1",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["IA", "ProbEst"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Computação Gráfica",
+    "sigla": "CG",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["GA", "AED1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Processamento Digital de Imagens",
+    "sigla": "PDI",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["CAP", "GA", "CDI"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Sistemas Distribuídos",
+    "sigla": "SD",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["SO"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 5,
+    "nome": "Eletiva",
+    "sigla": "Eletiva",
+    "categoria": "eletiva",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Teoria da Computação",
+    "sigla": "TC",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["MD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Eletiva",
+    "sigla": "Eletiva",
+    "categoria": "eletiva",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Programação Paralela e Distribuída",
+    "sigla": "PPD",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["SO"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Paradigmas de Linguagens de Programação",
+    "sigla": "PLP",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["PAA"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Desenvolvimento de Software para Web 2",
+    "sigla": "DSW2",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["DSW1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Arquitetura de Software e Padrões",
+    "sigla": "ASP",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["ES2"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Banco de Dados para Ciência de Dados",
+    "sigla": "BDCD",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["PIBD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Aprendizado de Máquina 2",
+    "sigla": "AM2",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["AM1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Processamento e Visualização de Dados",
+    "sigla": "PVD",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["CG"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Processamento Digital de Imagens 3D e Vídeos",
+    "sigla": "PDI3D",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["PDI"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Arquitetura e Organização de Computadores 2",
+    "sigla": "Arq2",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["ARQ1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Engenharia de Sistemas",
+    "sigla": "EngeSist",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["ES1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 6,
+    "nome": "Sistemas Digitais",
+    "sigla": "SistDig",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["LD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Construção de Compuladores",
+    "sigla": "Compiladores",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": ["TC", "CAP"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Eletiva",
+    "sigla": "Eletiva",
+    "categoria": "eletiva",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Metodologia Científica",
+    "sigla": "MC",
+    "categoria": "obrigatoria",
+    "creditos": 4,
+    "pre_requisitos": []
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Desenvolvimento Móvel",
+    "sigla": "DMovel",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["DSW2"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "DevOps",
+    "sigla": "DevOps",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["ES2"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Visão Computacional",
+    "sigla": "VC",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["AlgeLin", "PDI", "PSD"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Projeto de Sistemas Computacionais Embarcados",
+    "sigla": "PDI3D",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["EngSist", "Arq2"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Arquiteturas de Alto Desempenho",
+    "sigla": "Arq3",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["Arq1"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 7,
+    "nome": "Processamento de Dados em Escala",
+    "sigla": "ProcDados",
+    "categoria": "optativa",
+    "creditos": 4,
+    "pre_requisitos": ["SO"]
+  },
+  {
+    "codigo": 0,
+    "semestre_perfil": 8,
+    "nome": "Estágio ou Trabalho de Conclusão de Curso",
+    "sigla": "Estagio/TCC",
+    "categoria": "obrigatoria",
+    "creditos": 24,
+    "pre_requisitos": []
+  }
+]
