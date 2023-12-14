@@ -1,5 +1,8 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .semestre {
@@ -108,12 +111,13 @@
 @media only screen and (min-width: 734px) {
     .disciplinas {
         flex-direction: row;
-        justify-content: space-between;
-        gap: 20px 57px;
+        justify-content: flex-start;
+        gap: 30px 54px;
         flex-wrap: wrap;
     }
 
     .cartao-disciplina {
+        margin: 0px;
         width: 300px;
         height: 180px;
         background-color: #D9D9D9;

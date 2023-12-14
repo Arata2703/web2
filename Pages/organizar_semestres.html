@@ -63,6 +63,7 @@
                                 semestres[disciplina.semestre_perfil - 1].obrigatorias.push(disciplina)
                             : semestres[disciplina.semestre_perfil - 1].optativas.push(disciplina)
                         })
+                        console.log(semestres)
                         // criando os cartões de disciplina
                         semestres.forEach(semestre => {
                             const semestreDiv = document.createElement('div')
@@ -75,6 +76,7 @@
                             disciplinasDiv.setAttribute('ondrop', 'drop(event)')
                             disciplinasDiv.setAttribute('ondragover', 'allowDrop(event)')
                             semestre.obrigatorias.forEach(disciplina => {
+                                //console.log(disciplina)
                                 const cartaoDisciplina = document.createElement('div')
                                 cartaoDisciplina.classList.add('cartao-disciplina')
                                 cartaoDisciplina.setAttribute('draggable', 'true')
@@ -101,7 +103,7 @@
                                 disciplinasDiv.appendChild(cartaoDisciplina)
                             })
                             semestreDiv.appendChild(disciplinasDiv)
-                            disciplinasDiv.appendChild(document.createElement('br'))
+                            //disciplinasDiv.appendChild(document.createElement('br'))
                             semestre.optativas.forEach(disciplina => {
                                 const cartaoDisciplina = document.createElement('div')
                                 cartaoDisciplina.classList.add('cartao-disciplina')
@@ -127,6 +129,7 @@
                             })
                             semestreDiv.appendChild(disciplinasDiv)
                             document.querySelector('main').appendChild(semestreDiv)
+                            console.log(semestreDiv)
                         })
                     })
                 }
