@@ -25,7 +25,120 @@
         </nav>
     </header>
     <main>
-        <div class="semestre">
+        <script>
+            function getDisciplinas() {
+                const json = fetch('/../disciplinas.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const disciplinas = data
+                        const disciplinasDiv = document.querySelector('.disciplinas')
+                        // dividindo a lista de disciplinas em semestres
+                        var semestres = [{
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }, {
+                            obrigatorias: [],
+                            optativas: []
+                        }]
+                        disciplinas.forEach(disciplina => {
+                            disciplina.categoria === 'Obrigatória' ? 
+                                semestres[disciplina.semestre_perfil - 1].obrigatorias.push(disciplina)
+                            : semestres[disciplina.semestre_perfil - 1].optativas.push(disciplina)
+                        })
+                        // criando os cartões de disciplina
+                        semestres.forEach(semestre => {
+                            const semestreDiv = document.createElement('div')
+                            semestreDiv.classList.add('semestre')
+                            const semestreTitulo = document.createElement('h2')
+                            semestreTitulo.innerText = `Semestre ${semestres.indexOf(semestre) + 1}`
+                            semestreDiv.appendChild(semestreTitulo)
+                            const disciplinasDiv = document.createElement('div')
+                            disciplinasDiv.classList.add('disciplinas')
+                            disciplinasDiv.setAttribute('ondrop', 'drop(event)')
+                            disciplinasDiv.setAttribute('ondragover', 'allowDrop(event)')
+                            semestre.obrigatorias.forEach(disciplina => {
+                                const cartaoDisciplina = document.createElement('div')
+                                cartaoDisciplina.classList.add('cartao-disciplina')
+                                cartaoDisciplina.setAttribute('draggable', 'true')
+                                cartaoDisciplina.setAttribute('id', `drag${disciplinas.indexOf(disciplina)}`)
+                                cartaoDisciplina.setAttribute('ondragstart', 'drag(event)')
+                                const disciplinaTitulo = document.createElement('div')
+                                disciplinaTitulo.classList.add('disciplina-titulo')
+                                const disciplinaTituloH3 = document.createElement('h3')
+                                disciplinaTituloH3.innerText = disciplina.nome
+                                disciplinaTitulo.appendChild(disciplinaTituloH3)
+                                cartaoDisciplina.appendChild(disciplinaTitulo)
+                                const disciplinaInformacoes = document.createElement('div')
+                                disciplinaInformacoes.classList.add('disciplinas-informacoes')
+                                const disciplinaInformacoesP1 = document.createElement('p')
+                                disciplinaInformacoesP1.innerText = `${disciplina.sigla} - ${disciplina.categoria}`
+                                const disciplinaInformacoesP2 = document.createElement('p')
+                                disciplinaInformacoesP2.innerText = `${disciplina.creditos} Créditos`
+                                const disciplinaInformacoesP3 = document.createElement('p')
+                                disciplinaInformacoesP3.innerText = disciplina.pre_requisitos.length ? disciplina.pre_requisitos : 'Nenhum Pré-Requisito'
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP1)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP2)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP3)
+                                cartaoDisciplina.appendChild(disciplinaInformacoes)
+                                disciplinasDiv.appendChild(cartaoDisciplina)
+                            })
+                            semestreDiv.appendChild(disciplinasDiv)
+                            disciplinasDiv.appendChild(document.createElement('br'))
+                            semestre.optativas.forEach(disciplina => {
+                                const cartaoDisciplina = document.createElement('div')
+                                cartaoDisciplina.classList.add('cartao-disciplina')
+                                const disciplinaTitulo = document.createElement('div')
+                                disciplinaTitulo.classList.add('disciplina-titulo')
+                                const disciplinaTituloH3 = document.createElement('h3')
+                                disciplinaTituloH3.innerText = disciplina.nome
+                                disciplinaTitulo.appendChild(disciplinaTituloH3)
+                                cartaoDisciplina.appendChild(disciplinaTitulo)
+                                const disciplinaInformacoes = document.createElement('div')
+                                disciplinaInformacoes.classList.add('disciplinas-informacoes')
+                                const disciplinaInformacoesP1 = document.createElement('p')
+                                disciplinaInformacoesP1.innerText = `${disciplina.sigla} - ${disciplina.categoria}`
+                                const disciplinaInformacoesP2 = document.createElement('p')
+                                disciplinaInformacoesP2.innerText = `${disciplina.creditos} Créditos`
+                                const disciplinaInformacoesP3 = document.createElement('p')
+                                disciplinaInformacoesP3.innerText = disciplina.pre_requisitos.length ? disciplina.pre_requisitos : 'Nenhum Pré-Requisito'
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP1)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP2)
+                                disciplinaInformacoes.appendChild(disciplinaInformacoesP3)
+                                cartaoDisciplina.appendChild(disciplinaInformacoes)
+                                disciplinasDiv.appendChild(cartaoDisciplina)
+                            })
+                            semestreDiv.appendChild(disciplinasDiv)
+                            document.querySelector('main').appendChild(semestreDiv)
+                        })
+                    })
+                }
+            getDisciplinas()
+        </script>
+        <div class="content">
+            <div class="botoes">
+                <button>Grade Horária</button>
+                <button>Editar Matérias</button>
+            </div>
+        </div>
+        <!-- <div class="semestre">
             <h2>Semestre 1</h2>
             <div class="disciplinas" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <div class="cartao-disciplina" draggable="true" id="drag1"  ondragstart="drag(event)">
@@ -68,10 +181,6 @@
                         <p>Nenhum Pré-Requisito</p>
                     </div>
                 </div>
-            </div>
-            <div class="botoes">
-                <button>Grade Horária</button>
-                <button>Editar Matérias</button>
             </div>
         </div>
         <div class="semestre">
@@ -138,10 +247,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="carrinho" ondrop="drop(event)" ondragover="allowDrop(event)">
             <p id="carrinho-vazio">Arraste as matérias para cá.</p>
+        </div>
         <script>
             function allowDrop(ev) {
                 if(['carrinho', 'disciplinas'].includes(ev.target.className))
