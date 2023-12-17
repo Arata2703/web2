@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh; 
+  box-sizing: border-box;
 }
 
 .container {
@@ -45,22 +46,20 @@ h2{
 .login-form {
   flex: 1;
   display: flex;
-  padding: 10% 10%;
+  padding: 10%;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   flex-direction: column;   
 }
 
 .login-form form {
   text-align: center;
   padding: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), 2px 2px 8px rgba(0, 0, 0, 0.2);
   background-color: #ECE6F0;
   width: 100%; 
   max-width: 300px; 
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .login-form input{
@@ -93,7 +92,6 @@ h2{
   .login-form-container {
     width: 50%; 
     height: 100vh; 
-    box-sizing: border-box; 
     float: left; 
   }
   .camada-vermelha {
